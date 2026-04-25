@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #333;
+}
+
+/* ヒーロー */
+.hero {
+  position: relative;
+  background: url(img/top1.png) center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  bottom: 10%;   /* ←上下位置調整 */
+  left: 10%;     /* ←左右位置調整 */
+}
+
+/* CTAボタン */
+.cta-btn {
+  display: inline-block;
+  background: #ffd700;
+  color: #000;
+  padding: 20px 60px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* ホバー効果 */
+.cta-btn:hover {
+  background: #ffcc00;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #ffd700;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* CTAバー */
+.cta-bar {
+  background: #007BFF;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+/* セクション */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.trouble ul {
+  text-align: left;
+  max-width: 500px;
+  margin: auto;
+}
+
+/* 数字 */
+.stats-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  background: #fff;
+  padding: 20px;
+  width: 120px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* 比較 */
+.comparison {
+  background: #f9f9f9;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.highlight {
+  background: #d4f5d4;
+}
+
+/* 体験談 */
+.voice-cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.voice-card {
+  position: relative;
+  background: #fff;
+  text-align: left;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.voice-card p {
+  line-height: 1.8;
+}
+
+.voice-card span {
+  position: absolute;
+  bottom: 10px;   /* 下からの距離 */
+  left: 20px;     /* 左からの距離 */
+  font-size: 14px;
+  color: #777;
+}
+
+/* CTA */
+.cta {
+  background: #007BFF;
+  color: #fff;
+}
