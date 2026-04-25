@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
   color: #333;
+  font-size: 20px;
 }
 
 /* ヒーロー */
@@ -68,6 +69,7 @@ section {
   text-align: left;
   max-width: 500px;
   margin: auto;
+  line-height: 2.5;
 }
 
 /* 数字 */
@@ -81,9 +83,14 @@ section {
 .stat {
   background: #fff;
   padding: 20px;
-  width: 120px;
+  width: 200px;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.stat h3{
+  color: rgb(243, 74, 7);
+  font-weight: 900;
 }
 
 /* 比較 */
