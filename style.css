@@ -8,17 +8,33 @@ body {
 /* ヒーロー */
 .hero {
   position: relative;
-  background: url(img/top1.png) center/cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .hero-overlay {
   position: absolute;
-  bottom: 10%;   /* ←上下位置調整 */
-  left: 10%;     /* ←左右位置調整 */
+  bottom: 8%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.fixed-cta {
+  position: fixed;
+  bottom: -100px;
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.fixed-cta.show {
+  bottom: 15px;
 }
 
 /* CTAボタン */
@@ -27,11 +43,11 @@ body {
   background: #ffd700;
   color: #000;
   padding: 20px 60px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   text-decoration: none;
   border-radius: 20px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* ホバー効果 */
@@ -48,7 +64,7 @@ body {
   text-decoration: none;
   font-weight: bold;
   border-radius: 8px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* CTAバー */
@@ -63,6 +79,10 @@ body {
 section {
   padding: 50px 20px;
   text-align: center;
+}
+
+.hero {
+  padding: 0;
 }
 
 .trouble ul {
@@ -85,10 +105,10 @@ section {
   padding: 20px;
   width: 200px;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.stat h3{
+.stat h3 {
   color: rgb(243, 74, 7);
   font-weight: 900;
 }
@@ -109,7 +129,8 @@ table {
   border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
   border: 1px solid #ddd;
   padding: 10px;
 }
@@ -133,7 +154,7 @@ th, td {
   padding: 20px;
   width: 300px;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .voice-card p {
@@ -142,8 +163,10 @@ th, td {
 
 .voice-card span {
   position: absolute;
-  bottom: 10px;   /* 下からの距離 */
-  left: 20px;     /* 左からの距離 */
+  bottom: 10px;
+  /* 下からの距離 */
+  left: 20px;
+  /* 左からの距離 */
   font-size: 14px;
   color: #777;
 }
@@ -153,3 +176,134 @@ th, td {
   background: #007BFF;
   color: #fff;
 }
+
+.cta-wrapper {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.cta-lead {
+  font-size: 14px;
+  color: #ff6600;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff7a00, #ff3d00);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 18px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(255, 100, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* ホバーで動く */
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(255, 100, 0, 0.4);
+}
+
+/* スマホ押しやすく */
+@media (max-width: 600px) {
+  .cta-button {
+    width: 90%;
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+.cta-sub {
+  font-size: 12px;
+  color: #777;
+  margin-top: 10px;
+}
+
+
+/* =========================
+   スマホ対応
+========================= */
+@media screen and (max-width: 768px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  /* ヒーロー */
+  .hero {
+    position: relative;
+    height: auto;
+  }
+
+  .hero-overlay {
+    top: 70%;
+  }
+
+  /* CTAボタン */
+  .cta-btn {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+
+  /* セクション */
+  section {
+    padding: 30px 15px;
+  }
+
+  /* 数字カード */
+  .stats-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat {
+    width: 90%;
+  }
+
+  /* 体験談 */
+  .voice-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .voice-card {
+    width: 90%;
+  }
+
+  /* テーブル */
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  /* CTAバー */
+  .cta-bar {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .hero-overlay {
+    transform: translate(-50%, -50%);
+    top: 80%;
+    left: 50%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  .hero-overlay {
+    top: 82%;
+  }
+}
+
